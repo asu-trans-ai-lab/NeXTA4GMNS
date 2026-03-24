@@ -35,6 +35,10 @@ Recognizing this limitation, GMNS community has highlighted the need for standar
 
 NeXTA was developed in response to these needs. It is a GMNS-compliant, open-source visualization platform designed for transportation network analysis and trajectory data interpretation. Rather than focusing solely on map rendering, NeXTA supports multi-resolution node-link representations and incorporates tensor-based data structures to facilitate the analysis of spatiotemporal traffic patterns grounded in established traffic flow theory [@Lighthill1955; @Richards1956].
 
+# State of the Field
+
+Several GIS and network analysis tools exist for transportation visualization, but none provide the combination of GMNS compliance, native simulation integration, and trajectory-level analysis that NeXTA offers. General-purpose tools such as QGIS are designed for broad spatial data tasks and require extensive plugin configuration and preprocessing to support transportation-specific workflows. Dedicated microsimulation platforms such as SUMO [@Behrisch2011SUMO] and VISSIM offer simulation capability but do not provide interactive, multi-resolution post-processing visualization. Tools such as TransCAD offer planning-level network analysis but are proprietary and do not natively support empirical trajectory datasets like NGSIM [@NGSIM2007] or GMNS-formatted inputs.
+
 | Feature | NeXTA | QGIS |
 |---|---|---|
 | Network Representation | GMNS-compliant, node-link model | GIS shapefiles and layers |
@@ -44,11 +48,11 @@ NeXTA was developed in response to these needs. It is a GMNS-compliant, open-sou
 | Tensor-Based Modeling | Supports tensor structures for trajectory processing | Not available |
 | Usability for Transportation Practitioners | Tailored for planners, researchers, and educators in traffic modeling | General-purpose GIS users |
 
-Its utility lies in enabling users to explore traffic dynamics, examine vehicle trajectories, and modify network structures for simulation input or scenario testing. Compared to general-purpose GIS tools, NeXTA offers built-in support for transportation-specific tasks such as interpreting outputs from microscopic simulation models and editing hierarchical transportation networks.
+NeXTA's utility lies in enabling users to explore traffic dynamics, examine vehicle trajectories, and modify network structures for simulation input or scenario testing. Compared to general-purpose GIS tools, NeXTA offers built-in support for transportation-specific tasks such as interpreting outputs from microscopic simulation models and editing hierarchical transportation networks.
 
 Datasets such as the Next Generation Simulation (NGSIM) [@NGSIM2007] provide detailed vehicle trajectories that can be difficult to analyze without specialized tools. NeXTA helps bridge this gap by enabling interactive visualization and analysis of such high-resolution data, supporting both research and practice in transportation modeling and simulation.
 
-# Software Description
+# Software Design
 
 ## Core Features and Capabilities
 
@@ -136,19 +140,17 @@ This capability proves particularly valuable when you're trying to validate micr
 
 The integration with empirical datasets like NGSIM also supports more advanced applications, including the development of machine learning models for traffic prediction [@KIM2020102786], the calibration of emerging connected and automated vehicle models [@Shladover2012], and the validation of traffic flow theories under real-world conditions.
 
-## Demonstration and Learning Resources
-
-To help users get the most out of NeXTA's capabilities, we've developed comprehensive demonstration materials. A detailed walkthrough video is available on YouTube: https://www.youtube.com/watch?v=example_NeXTA_demo. This video provides guided instruction on NeXTA's core tools, including network editing workflows, OD filtering techniques, advanced trajectory visualization options, and tensor exploration features.
-
-The demonstration materials are designed to serve multiple audiences: researchers learning to use NeXTA for their own work, practitioners implementing the tool in operational settings, and educators incorporating visualization into their transportation courses.
-
-# Impact and Future Directions
+# Research Impact Statement
 
 NeXTA represents a significant step forward in making sophisticated transportation analysis accessible to a broader community of researchers and practitioners. By combining rigorous mathematical foundations with intuitive visualization interfaces, we've created a tool that bridges the gap between theoretical traffic modeling and practical transportation planning applications.
 
 Looking ahead, we're excited about several emerging directions. The integration of machine learning approaches with traditional traffic flow theory offers promising opportunities for more accurate and robust transportation models [@Zhang2011]. The growing availability of connected vehicle data will create new possibilities for real-time network analysis and control [@Talebpour2016]. And the increasing emphasis on multimodal transportation systems will require more sophisticated tools for analyzing the interactions between different travel modes [@Cats2017].
 
 We believe NeXTA's flexible, extensible architecture positions it well to support these evolving needs while maintaining its core strengths in visualization and analysis.
+
+# AI Usage Disclosure
+
+Generative AI tools were used to improve sentence clarity and suggest phrasing in several sections of the paper. All technical content, mathematical formulations, software design decisions, and claims regarding functionality were authored, verified, and validated by the human authors. No AI-generated code was incorporated into the NeXTA software itself. 
 
 # Acknowledgements
 
